@@ -16,12 +16,16 @@
                     class="nav-item nav-link {{ Request::routeIs('about') ? 'active' : null }}">About</a>
                 <a href="{{ route('classes') }}"
                     class="nav-item nav-link {{ Request::routeIs('classes') ? 'active' : null }}">Classes</a>
-                <a href="team.html" class="nav-item nav-link">Teachers</a>
-                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                <a href="{{ route('teachers') }}"
+                    class="nav-item nav-link {{ Request::routeIs('teachers') ? 'active' : null }}">Teachers</a>
+                <a href="{{ route('gallery') }}"
+                    class="nav-item nav-link {{ Request::routeIs('gallery') ? 'active' : null }}">Gallery</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                    <a href="#"
+                        class="nav-link dropdown-toggle {{ Request::routeIs('blog.index') ? 'active' : null }}"
+                        data-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu rounded-0 m-0">
-                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                        <a href="{{ route('blog.index') }}" class="dropdown-item">Blog Grid</a>
                         <a href="single.html" class="dropdown-item">Blog Detail</a>
                     </div>
                 </div>
